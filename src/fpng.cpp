@@ -1840,7 +1840,7 @@ do_literals:
 		memset(num_codes, 0, sizeof(num_codes));
 		for (uint32_t i = 0; i < num_syms; i++)
 		{
-			assert(pCode_sizes[i] <= FPNG_DECODER_TABLE_SIZE);
+			assert(static_cast<uint32_t>(pCode_sizes[i]) <= FPNG_DECODER_TABLE_SIZE);
 			num_codes[pCode_sizes[i]]++;
 		}
 
